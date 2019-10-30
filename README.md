@@ -8,13 +8,13 @@ The GPG-based points-to analysis is implemented in gcc 4.7.2 as a dynamic plugin
 Running the GPG-based Points-to Analysis
 ----------------------------------------
 Please [download file gcc472.tgz file](https://tinyurl.com/y3l3aeek) and copy it in the top level directory `GPG-based-Points-to-Analysis`. The souce of the plugin for GPG-based points-to analysis is contained in a sub-directory called `gpg-imp`. This sub-directory is contained in the top level directory `GPG-based-Points-to-Analysis`. The complete sequence of steps needed to run the implementation for the first time is as follows. For subsequent runs, a suitable combination of last three steps would suffice.
-
-    $cd GPG-based-Points-to-Analysis    # The top level directory.
-    $tar xvfz gcc472.tgz                # This creates the subdirectory gcc472 containing the gcc installation.
-    $cd gpg-imp                         # This contains the source of the GPG-based points-to analysis.
-    $source set-lib-paths.sh            # `source` command instantiates the shell variables in the current shell.
-    $make run                           # Builds the plugin and runs it on $(TEST) in the Makefile.
-    
+```bash
+   $ cd GPG-based-Points-to-Analysis    # The top level directory.
+   $ tar xvfz gcc472.tgz                # This creates the subdirectory gcc472 containing the gcc installation.
+   $ cd gpg-imp                         # This contains the source of the GPG-based points-to analysis.
+   $ source set-lib-paths.sh            # `source` command instantiates the shell variables in the current shell.
+   $ make run                           # Builds the plugin and runs it on $(TEST) in the Makefile.
+```
 
 This produces the output of the analysis in file`result.233i.gpg`. Please refer to the file [`HOW_TO_READ_GPG_DUMP`](HOW_TO_READ_GPG_DUMP.md) for interpreting the data dumped by the implementation.
 
